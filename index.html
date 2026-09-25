@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Turbo Circuit Legends</title>
+    <link rel="stylesheet" href="./style.css?v=20260722f1weekend" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <main id="home" class="screen home-screen active">
+      <section class="home-shell">
+        <header class="home-topbar">
+          <div>
+            <p class="eyebrow">Turbo Circuit Legends</p>
+            <h1>모드 선택</h1>
+          </div>
+          <div class="home-status">월드 투어 시즌</div>
+        </header>
+        <div class="mode-cards">
+          <button class="mode-card story-card" id="storyModeBtn">
+            <span class="mode-tag">루키 시즌</span>
+            <strong>스토리 모드</strong>
+            <small>팀 드라마와 라이벌전으로 이어지는 5챕터 시즌</small>
+          </button>
+          <button class="mode-card open-card" id="openWorldBtn">
+            <span class="mode-tag">자유 주행</span>
+            <strong>오픈월드 모드</strong>
+            <small>마을과 랜드마크를 돌아다니는 큰 월드</small>
+          </button>
+          <button class="mode-card race-card" id="racingModeBtn">
+            <span class="mode-tag">클래식</span>
+            <strong>레이싱 모드</strong>
+            <small>아이템전, 그랑프리, 서바이벌, 스피드전</small>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <main id="menu" class="screen">
+      <section class="menu-panel">
+        <p class="eyebrow">Original WebGL Kart Racer</p>
+        <h1>레이싱 모드</h1>
+        <div class="menu-grid">
+          <button data-start="item">아이템전</button>
+          <button data-start="grandprix">그랑프리</button>
+          <button data-start="survival">서바이벌전</button>
+          <button data-start="speed">스피드전</button>
+        </div>
+        <div class="selectors">
+          <label>랩 <select id="lapSelect"><option>1</option><option selected>3</option><option>5</option></select></label>
+          <label>난이도 <select id="difficulty"><option>Easy</option><option selected>Normal</option><option>Hard</option><option>Expert</option></select></label>
+          <label>코스 <select id="trackSelect"></select></label>
+        </div>
+        <div class="garage">
+          <label>캐릭터 <select id="characterSelect"><option>루나</option><option>카이</option><option>노바</option><option>솔</option><option>토르크</option><option>루미</option><option>셀레나</option><option>로제</option><option>요리</option></select></label>
+          <label>카트 <select id="kartSelect"><option>스프린트</option><option>컴팩트</option><option>볼트</option><option>헤비</option><option>로드스터</option></select></label>
+          <label>타이어 <select id="tireSelect"><option>그립</option><option>스피드</option><option>오프로드</option></select></label>
+          <label>글라이더 <select id="gliderSelect"><option>윙</option><option>코멧</option><option>스텔라</option></select></label>
+        </div>
+        <button class="secondary-btn" id="racingHomeBtn">메인화면</button>
+      </section>
+    </main>
+
+    <section id="story" class="screen">
+      <section class="menu-panel story-panel">
+        <p class="eyebrow">Breakline: Rookie Season</p>
+        <h2>브레이크라인: 루키 시즌</h2>
+        <p class="story-copy">아스터 그랑프리 아레나에서 펼쳐지는 영화식 루키 시즌. 긴 컷신, 피트월 갈등, 팀메이트 라이벌전 뒤 실제 레이스가 시작됩니다.</p>
+        <div id="storyProgress" class="story-progress"></div>
+        <div id="storyChapterList" class="story-chapter-list"></div>
+        <div id="storyBriefing" class="story-briefing">
+          <div>
+            <span id="storyBriefTag" class="mode-tag">챕터</span>
+            <h3 id="storyBriefTitle">테스트 데이</h3>
+            <p id="storyBriefText"></p>
+          </div>
+          <div class="story-goals">
+            <span id="storyBriefTrack">코스</span>
+            <span id="storyBriefGoal">목표</span>
+            <span id="storyBriefLaps">랩</span>
+          </div>
+        </div>
+        <div class="story-actions">
+          <button id="storyStartBtn">챕터 시작</button>
+          <button class="secondary-btn" id="storyHomeBtn">메인화면</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="cinematic" class="screen cinematic-screen">
+      <section id="cinematicFrame" class="cinematic-frame">
+        <video id="cinematicVideo" class="cinematic-video" playsinline></video>
+        <div class="cinematic-set">
+          <span id="cinematicKicker" class="cinematic-kicker">CUTSCENE</span>
+          <h2 id="cinematicTitle">장면 제목</h2>
+          <div class="cinematic-visual">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+        <div class="cinematic-dialogue">
+          <strong id="cinematicSpeaker">서윤</strong>
+          <p id="cinematicText">대사</p>
+        </div>
+        <div class="cinematic-controls">
+          <span id="cinematicProgress">1 / 1</span>
+          <button class="secondary-btn" id="cinematicSkipBtn">건너뛰기</button>
+          <button id="cinematicNextBtn">다음</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="hud" class="hud">
+      <div class="top-left">
+        <div class="chip"><span id="modeText">ITEM</span><strong id="lapText">1 / 3</strong></div>
+        <div class="story-hud" id="storyHud"><strong id="storyHudTitle">스토리</strong><span id="storyHudGoal">목표</span></div>
+        <div class="meter"><i id="boostMeter"></i></div>
+      </div>
+      <div class="top-right">
+        <div class="rank" id="rankText">1st</div>
+        <div class="fps" id="fpsText">60 FPS</div>
+      </div>
+      <canvas id="minimap" width="160" height="160"></canvas>
+      <div class="speed"><b id="speedText">0</b><span>km/h</span></div>
+      <div class="item-slot"><span id="itemText">-</span><i id="roulette"></i></div>
+      <div id="notice" class="notice"></div>
+      <div id="ink" class="ink"></div>
+    </section>
+
+    <section id="pause" class="screen pause">
+      <section class="menu-panel small">
+        <h2>일시정지</h2>
+        <label>그래픽 <select id="quality"><option>High</option><option selected>Medium</option><option>Low</option></select></label>
+        <label>FPS 제한 <select id="fpsCap"><option>60</option><option>90</option><option>120</option></select></label>
+        <label>해상도 <input id="resolution" type="range" min="60" max="100" value="90" /></label>
+        <label>음량 <input id="volume" type="range" min="0" max="100" value="65" /></label>
+        <button id="resumeBtn">계속하기</button>
+        <button id="menuBtn">메인화면</button>
+      </section>
+    </section>
+
+    <section id="results" class="screen">
+      <section class="menu-panel">
+        <h2 id="resultTitle">결과</h2>
+        <div id="resultList" class="results-list"></div>
+        <p id="resultStory" class="result-story"></p>
+        <div class="result-actions">
+          <button id="storyNextBtn">다음 챕터</button>
+          <button id="storyRetryBtn">다시 도전</button>
+        </div>
+        <button id="nextRaceBtn">다음 경기</button>
+        <button id="backMenuBtn">메인화면</button>
+      </section>
+    </section>
+
+    <script type="module" src="./game.js?v=20260722f1weekend"></script>
+  </body>
+</html>

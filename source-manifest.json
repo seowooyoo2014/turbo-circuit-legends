@@ -1,0 +1,127 @@
+{
+  "source_root": "/Users/seol-eunjin/Documents/game",
+  "copied": [
+    {
+      "source": "index.html",
+      "target": "index.html",
+      "sha256": "3364b8f910db415c27526ab4ec6025e7686bb43ddd452dd6b91ed6baf2a36fa4"
+    },
+    {
+      "source": "racing-world.html",
+      "target": "racing-world.html",
+      "sha256": "2bfb5d14b2a8f18176dbdcd972cf414def83ae67f37ce4ccc1c4caa3b9a9de7f"
+    },
+    {
+      "source": "style.css",
+      "target": "style.css",
+      "sha256": "0ecf808c57b6fa77a726ae80b20faf94bf173323976ec24fccc509cf1bb873ab"
+    },
+    {
+      "source": "game.js",
+      "target": "game.js",
+      "sha256": "978fc524a8dc595a155d3172cc3d9db1a23df866d615c61845ad46ce0ecff76c"
+    },
+    {
+      "source": "physics.js",
+      "target": "physics.js",
+      "sha256": "a736e4396e80db8a494ae22bf448aab62ac10e828c07fc780259be2d5e689fed"
+    },
+    {
+      "source": "player.js",
+      "target": "player.js",
+      "sha256": "3becc90b8bb4f02130f54984fb8c263092087c3e9d0c3e286e1f2b728526f55d"
+    },
+    {
+      "source": "ai.js",
+      "target": "ai.js",
+      "sha256": "29ba4099539a2fbd43f8a4fc1b966794279d4bdcf77817530f58f557472f51c0"
+    },
+    {
+      "source": "items.js",
+      "target": "items.js",
+      "sha256": "6eaa4663fe26086512c89f3209b0f942a6ddcc1f6233eda7db4d12d08763d455"
+    },
+    {
+      "source": "audio.js",
+      "target": "audio.js",
+      "sha256": "7e0f7590f87b373b5c2a2f1d45520612a74717fb27300308cba7ba8c5878de13"
+    },
+    {
+      "source": "ui.js",
+      "target": "ui.js",
+      "sha256": "c82582bca932bdabf5e1fcd0b3a0f73da1f668d0fe0f0c3c3688d607bc989f2d"
+    },
+    {
+      "source": "story.js",
+      "target": "story.js",
+      "sha256": "b4cb1548ee42fd4ff53a6d5514637bb0e56de1773da24fca6ac6cb88bc56ed51"
+    },
+    {
+      "source": "track.js",
+      "target": "track.js",
+      "sha256": "8e4585e2a74a17388506644df9dfbb422b9c9c551e0ae3875fa418cce93eb0c6"
+    },
+    {
+      "source": "effects.js",
+      "target": "effects.js",
+      "sha256": "ad16cf54bbd85bcb2569c8a0c7eba9fc465f9c84c27fb1cd298a0760a5cfeb6b"
+    },
+    {
+      "source": "assets.js",
+      "target": "assets.js",
+      "sha256": "7d47fa452a88cee8d21160ef3edd0306976247e432cb19b16ef8bc9730169d06"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "sha256": "0850bcd88a5d5a515b330b966e170db9eb3c109aeaf1af3d552c4161fe72bcf2"
+    },
+    {
+      "source": "shaders/trackGlow.vert",
+      "target": "shaders/trackGlow.vert",
+      "sha256": "74754e7753d91388a6e175838d84341d05f16fceefd523aabfc6411ff3a45570"
+    },
+    {
+      "source": "shaders/trackGlow.frag",
+      "target": "shaders/trackGlow.frag",
+      "sha256": "9a605dccb02f881aefcba7614690b4d15072721f879639472080245fb8824033"
+    },
+    {
+      "source": "assets/vendor/three.module.js",
+      "target": "assets/vendor/three.module.js",
+      "sha256": "5916c8dfb5f4e3eede312de305345868d4a0a8105383b080c6985565d6e79b46"
+    },
+    {
+      "source": "assets/vendor/GLTFLoader.js",
+      "target": "assets/vendor/GLTFLoader.js",
+      "sha256": "bb3051b3efd2157838ddca8c57decfb17cfefb8b28e62dcd6d0ea312bd6652c9"
+    },
+    {
+      "source": "assets/models/README.md",
+      "target": "assets/models/README.md",
+      "sha256": "a632b9e01bda7147e6b5b6f2212889d7b2cb3bb66d0e8be42d451294ce784f6c"
+    },
+    {
+      "source": "assets/characters/README.md",
+      "target": "assets/characters/README.md",
+      "sha256": "98cdc348178798e476ef61f179d9261c3ce9582cf41728207d16f55f0a748770"
+    },
+    {
+      "source": "assets/textures/README.md",
+      "target": "assets/textures/README.md",
+      "sha256": "65e57bdc10a26839de44edccb6e93c2415995a1c15719e8b5b2be412782e5ef8"
+    },
+    {
+      "source": "assets/cinematics/ch02a_race_incident.mp4",
+      "target": "assets/cinematics/ch02a_race_incident.mp4",
+      "sha256": "3e7e022df00828bdb4bf8abd79869cbfba62a7a8dcb4c80c1feaba2481f46277"
+    }
+  ],
+  "excluded": [
+    "backup archives",
+    "render frames",
+    "editing intermediates",
+    "caches",
+    "personal save data"
+  ]
+}
