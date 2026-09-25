@@ -6,7 +6,11 @@
 
 ## 화면
 
-실행본 캡처를 추가할 예정입니다.
+![현재 버전 current-race 화면](docs/screenshots/current-race.png)
+![현재 버전 current-menu 화면](docs/screenshots/current-menu.png)
+![현재 버전 current-select 화면](docs/screenshots/current-select.png)
+
+2026-09-25 독립 복사본의 브라우저 실행 화면에서 촬영했습니다. Safari PDF 내보내기 방식이라 일부 CSS 글자와 어두운 장면은 화면 표시와 다를 수 있습니다.
 
 ## 실행
 
